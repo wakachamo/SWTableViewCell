@@ -583,7 +583,7 @@ static NSString * const kTableViewCellContentView = @"UITableViewCellContentView
 #pragma mark UIGestureRecognizer
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    return ![touch.view isKindOfClass:[UIButton class]];
+    return ![touch.view isKindOfClass:[UIButton class]] && ![touch.view isKindOfClass:NSClassFromString(@"STTweetLabel")];
 }
 
 @end
